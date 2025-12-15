@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background: #ECDDD4 - beige/cream */
+    --background: 23 39% 88%;
+    /* Foreground - darker brown for better readability */
+    --foreground: 17 30% 22%;
+
+    --card: 23 35% 85%;
+    --card-foreground: 17 30% 22%;
+
+    --popover: 23 39% 88%;
+    --popover-foreground: 17 30% 22%;
+
+    --primary: 17 30% 22%;
+    --primary-foreground: 23 39% 88%;
+
+    --secondary: 23 30% 82%;
+    --secondary-foreground: 17 30% 22%;
+
+    --muted: 23 25% 84%;
+    --muted-foreground: 17 25% 32%;
+
+    --accent: 17 28% 30%;
+    --accent-foreground: 23 39% 88%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 23 25% 78%;
+    --input: 23 25% 78%;
+    --ring: 17 30% 22%;
+
+    --radius: 0.75rem;
+
+    /* Custom portfolio colors - darker for better contrast */
+    --cream: 23 39% 88%;
+    --cream-dark: 23 30% 82%;
+    --brown-light: 17 22% 40%;
+    --brown: 17 30% 25%;
+    --brown-dark: 17 35% 18%;
+    --coffee: 17 35% 15%;
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(17 22% 37% / 0.08);
+    --shadow-card: 0 8px 30px hsl(17 22% 37% / 0.1);
+    --shadow-hover: 0 12px 40px hsl(17 22% 37% / 0.15);
+  }
+
+  .dark {
+    --background: 17 25% 12%;
+    --foreground: 23 39% 88%;
+
+    --card: 17 22% 18%;
+    --card-foreground: 23 39% 88%;
+
+    --popover: 17 22% 18%;
+    --popover-foreground: 23 39% 88%;
+
+    --primary: 23 35% 75%;
+    --primary-foreground: 17 25% 12%;
+
+    --secondary: 17 20% 22%;
+    --secondary-foreground: 23 35% 88%;
+
+    --muted: 17 20% 22%;
+    --muted-foreground: 23 20% 65%;
+
+    --accent: 23 30% 60%;
+    --accent-foreground: 17 25% 12%;
+
+    --border: 17 20% 28%;
+    --input: 17 20% 28%;
+    --ring: 23 35% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .heading-display {
+    font-family: var(--font-heading);
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight;
+    color: hsl(var(--brown));
+  }
+
+  .heading-section {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold;
+    color: hsl(var(--brown-dark));
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+    @apply text-base md:text-lg leading-relaxed;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .card-portfolio {
+    @apply bg-card rounded-2xl p-6 md:p-8;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-portfolio:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(var(--secondary));
+    color: hsl(var(--brown));
+    transition: all 0.2s ease;
+  }
+
+  .skill-tag:hover {
+    background: hsl(var(--brown));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium tracking-wide;
+    color: hsl(var(--brown));
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5;
+    background: hsl(var(--accent));
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 rounded-full font-medium text-sm tracking-wide;
+    background: hsl(var(--brown));
+    color: hsl(var(--cream));
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: hsl(var(--coffee));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 rounded-full font-medium text-sm tracking-wide border-2;
+    border-color: hsl(var(--brown));
+    color: hsl(var(--brown));
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: hsl(var(--brown));
+    color: hsl(var(--cream));
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
