@@ -23,7 +23,7 @@ const skillCategories = [
     skills: [
       'HTML', 'CSS', 'JavaScript',
       'React', 'Redux', 'Node.js', 'Express',
-      'EJS', 'REST APIs', 'SQL', 'MongoDB',
+      'REST APIs', 'SQL', 'MongoDB',
       'Bootstrap', 'Tailwind CSS', 'Git & GitHub'
     ],
   },
