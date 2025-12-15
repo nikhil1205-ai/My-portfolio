@@ -5,7 +5,7 @@ import { useToast } from '@/hooks/use-toast';
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'nikhildangi1205@gmail.com', href: 'mailto:nikhildangi1205@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 7724088978', href: 'tel:+917724088978' },
-  { icon: MapPin, label: 'Location', value: 'VIT, Vellore, India', href: '#' },
+  { icon: MapPin, label: 'Location', value: 'VIT, Bhopal, India', href: '#' },
 ];
 
 const socialLinks = [
@@ -100,7 +100,7 @@ const ContactSection = () => {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-brown focus:border-transparent outline-none transition-all"
-                  placeholder="John Doe"
+                  placeholder="Nik D"
                 />
               </div>
 
@@ -115,7 +115,7 @@ const ContactSection = () => {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
                   className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-brown focus:border-transparent outline-none transition-all"
-                  placeholder="john@example.com"
+                  placeholder="nik@example.com"
                 />
               </div>
 
@@ -130,7 +130,7 @@ const ContactSection = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-background border border-border rounded-xl focus:ring-2 focus:ring-brown focus:border-transparent outline-none transition-all resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your reviews...."
                 />
               </div>
 

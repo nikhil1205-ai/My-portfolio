@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Globe, Brain, MessageSquare, Activity, User } from 'lucide-react';
+import { ExternalLink, Github, Globe, Brain, MessageSquare, Activity, User,Baby } from 'lucide-react';
 
 const projects = [
   {
@@ -7,6 +7,9 @@ const projects = [
     description: 'A full-stack web application showcasing modern web development skills with dynamic features and responsive design.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     color: 'from-amber-500/20 to-orange-500/20',
+    gitLink:"/",
+    deployLink:"/",
+
   },
   {
     icon: Brain,
@@ -14,6 +17,8 @@ const projects = [
     description: 'Machine learning-based malware and network detection system for identifying malicious files, URLs, and images.',
     tags: ['Python', 'ML', 'Security', 'Deep Learning'],
     color: 'from-red-500/20 to-pink-500/20',
+    gitLink:"/",
+    deployLink:"/",
   },
   {
     icon: Activity,
@@ -21,6 +26,8 @@ const projects = [
     description: 'ML model classifying ECG signals to detect myocardial infarction, abnormal heartbeat, and cardiac conditions.',
     tags: ['Python', 'TensorFlow', 'ECG Analysis', 'Healthcare AI'],
     color: 'from-rose-500/20 to-red-500/20',
+    gitLink:"/",
+    deployLink:"/",
   },
   {
     icon: MessageSquare,
@@ -28,6 +35,8 @@ const projects = [
     description: 'Data analysis tool extracting meaningful insights, patterns, and statistics from WhatsApp conversation data.',
     tags: ['Python', 'Pandas', 'NLP', 'Data Visualization'],
     color: 'from-green-500/20 to-emerald-500/20',
+    gitLink:"",
+    deployLink:"",
   },
   {
     icon: User,
@@ -35,6 +44,17 @@ const projects = [
     description: 'AI-driven project exploring human body pose detection and movement analysis using computer vision.',
     tags: ['Python', 'Computer Vision', 'Pose Detection', 'AI'],
     color: 'from-blue-500/20 to-cyan-500/20',
+    gitLink:"",
+    deployLink:"",
+  },
+  {
+    icon: Baby,
+    title: 'Body_Poses_nikhil-ai',
+    description: 'AI-driven project exploring human body pose detection and movement analysis using computer vision.',
+    tags: ['Python', 'Computer Vision', 'Pose Detection', 'AI'],
+    color: 'from-blue-500/20 to-cyan-500/20',
+    gitLink:"",
+    deployLink:"",
   },
 ];
 
@@ -60,12 +80,12 @@ const ProjectsSection = () => {
                     <project.icon className="w-6 h-6 text-brown" />
                   </div>
                   <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button className="p-2 bg-secondary rounded-lg hover:bg-brown hover:text-cream transition-colors">
+                    <a className="p-2 bg-secondary rounded-lg hover:bg-brown hover:text-cream transition-colors" href={`${project.gitLink}`} >
                       <Github className="w-4 h-4" />
-                    </button>
-                    <button className="p-2 bg-secondary rounded-lg hover:bg-brown hover:text-cream transition-colors">
+                    </a>
+                    <a className="p-2 bg-secondary rounded-lg hover:bg-brown hover:text-cream transition-colors" href={`${project.deployLink}`}>
                       <ExternalLink className="w-4 h-4" />
-                    </button>
+                    </a>
                   </div>
                 </div>
 

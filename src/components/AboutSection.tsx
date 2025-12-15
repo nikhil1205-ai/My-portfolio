@@ -4,7 +4,7 @@ const highlights = [
   { icon: Brain, label: 'AI/ML Expert' },
   { icon: Code, label: 'Full Stack Dev' },
   { icon: Laptop, label: 'Self-Taught' },
-  { icon: Trophy, label: 'Hackathon Winner' },
+  { icon: Trophy, label: 'Real-world project' },
 ];
 
 const AboutSection = () => {
@@ -39,10 +39,10 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-body">
               <p>
-                My journey into the world of Data Science began during Class 11 when I discovered 
+                My journey into the world of Data Science began during <strong className="text-brown-dark">Class 11</strong> when I discovered 
                 the fascinating intersection of mathematics, programming, and real-world problem-solving. 
-                What started as curiosity through YouTube tutorials quickly evolved into a deep passion 
-                for Machine Learning and Artificial Intelligence.
+                What started as curiosity through <strong className="text-brown-dark">YouTube tutorials</strong> quickly evolved into a deep passion 
+                for <strong className="text-brown-dark">Machine Learning and Artificial Intelligence.</strong>
               </p>
               
               <p>
@@ -53,10 +53,9 @@ const AboutSection = () => {
               </p>
               
               <p>
-                Beyond AI, I've expanded my skill set into Full Stack Web Development, mastering 
+                Beyond AI, I've expanded my skill set into <strong className="text-brown-dark">Full Stack Web Development</strong>, mastering 
                 technologies like React, Node.js, and modern database systems. I believe in 
-                continuous learning and actively participate in hackathons, open-source contributions, 
-                and collaborative projects.
+                continuous learning and actively participate in hackathons, open-source contributions, and collaborative projects.
               </p>
             </div>
 
