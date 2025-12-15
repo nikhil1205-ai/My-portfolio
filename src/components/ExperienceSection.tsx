@@ -58,7 +58,7 @@ const ExperienceSection = () => {
                         <exp.icon className="w-6 h-6 text-brown" />
                       </div>
                       <div>
-                        <span className="inline-block px-3 py-1 text-xs bg-brown text-cream rounded-full mb-2">
+                        <span className="inline-block px-3 py-1 text-xs bg-brown text-cream rounded-full mb-2 white_blue_font">
                           {exp.type}
                         </span>
                         <h3 className="font-heading text-xl font-semibold text-brown-dark">

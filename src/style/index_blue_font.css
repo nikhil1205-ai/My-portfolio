@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   BASE THEME (BLUISH)
+========================= */
+@layer base {
+  :root {
+    /* Background */
+    --background: 215 30% 94%;
+    --foreground: 215 25% 22%;
+
+    --card: 215 28% 90%;
+    --card-foreground: 215 25% 22%;
+
+    --popover: 215 30% 94%;
+    --popover-foreground: 215 25% 22%;
+
+    /* Primary - muted blue */
+    --primary: 215 35% 35%;
+    --primary-foreground: 215 30% 96%;
+
+    --secondary: 215 25% 88%;
+    --secondary-foreground: 215 25% 22%;
+
+    --muted: 215 20% 90%;
+    --muted-foreground: 215 18% 40%;
+
+    /* Accent */
+    --accent: 215 45% 45%;
+    --accent-foreground: 215 30% 96%;
+
+    --destructive: 0 75% 58%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 20% 82%;
+    --input: 215 20% 82%;
+    --ring: 215 45% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom blues */
+    --blue-soft: 215 30% 94%;
+    --blue-light: 215 28% 88%;
+    --blue-muted: 215 22% 45%;
+    --blue: 215 35% 35%;
+    --blue-dark: 215 40% 25%;
+    --navy: 215 45% 18%;
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(215 25% 30% / 0.08);
+    --shadow-card: 0 8px 30px hsl(215 25% 30% / 0.12);
+    --shadow-hover: 0 12px 40px hsl(215 25% 30% / 0.16);
+
+    --theme-primary: 215 35% 35%;      /* main blue */
+    --theme-primary-dark: 215 40% 25%; /* darker blue */
+    --theme-primary-soft: 215 30% 88%;
+  }
+
+  /* =========================
+     DARK MODE
+  ========================= */
+  .dark {
+    --background: 215 30% 10%;
+    --foreground: 215 30% 92%;
+
+    --card: 215 28% 15%;
+    --card-foreground: 215 30% 92%;
+
+    --popover: 215 28% 15%;
+    --popover-foreground: 215 30% 92%;
+
+    --primary: 215 45% 70%;
+    --primary-foreground: 215 30% 10%;
+
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 215 30% 92%;
+
+    --muted: 215 25% 20%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 50% 65%;
+    --accent-foreground: 215 30% 10%;
+
+    --border: 215 25% 28%;
+    --input: 215 25% 28%;
+    --ring: 215 45% 70%;
+  }
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+@layer components {
+  .section-padding {
+    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+  }
+
+  .container-narrow {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .heading-display {
+    font-family: var(--font-heading);
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight;
+    color: hsl(var(--blue-dark));
+  }
+
+  .heading-section {
+    font-family: var(--font-heading);
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold;
+    color: hsl(var(--navy));
+  }
+
+  .text-body {
+    font-family: var(--font-body);
+    @apply text-base md:text-lg leading-relaxed;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .card-portfolio {
+    @apply bg-card rounded-2xl p-6 md:p-8;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-portfolio:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+
+  .skill-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium;
+    background: hsl(var(--secondary));
+    color: hsl(var(--blue-dark));
+    transition: all 0.2s ease;
+  }
+
+  .skill-tag:hover {
+    background: hsl(var(--blue));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium tracking-wide;
+    color: hsl(var(--blue-dark));
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5;
+    background: hsl(var(--accent));
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 rounded-full font-medium text-sm tracking-wide;
+    background: hsl(var(--blue));
+    color: hsl(var(--primary-foreground));
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: hsl(var(--blue-dark));
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+
+  .btn-outline {
+    @apply px-8 py-3 rounded-full font-medium text-sm tracking-wide border-2;
+    border-color: hsl(var(--blue));
+    color: hsl(var(--blue));
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: hsl(var(--blue));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+/* =========================
+   UTILITIES & ANIMATIONS
+========================= */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+/* =========================
+   COMPATIBILITY UTILITIES
+   (OLD BROWN CLASSES)
+========================= */
+@layer utilities {
+  /* TEXT */
+  .text-brown {
+    color: hsl(var(--theme-primary));
+  }
+
+  .text-brown-dark {
+    color: hsl(var(--theme-primary-dark));
+  }
+
+  /* BACKGROUND */
+  .bg-brown {
+    background-color: hsl(var(--theme-primary));
+  }
+
+  /* BORDER */
+  .border-brown {
+    border-color: hsl(var(--theme-primary));
+  }
+
+  .white_blue_font {
+  color: hsl(0 0% 100%);
+   }
+}

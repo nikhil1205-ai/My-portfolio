@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   THEME COLOR VARIABLES
+========================= */
+@layer base {
+  :root {
+    /* New blue-based palette */
+    --theme-primary: 215 35% 35%;      /* main blue */
+    --theme-primary-dark: 215 40% 25%; /* darker blue */
+    --theme-primary-soft: 215 30% 88%; /* soft background blue */
+  }
+}
+
+/* =========================
+   COMPATIBILITY UTILITIES
+   (OLD BROWN CLASSES)
+========================= */
+@layer utilities {
+  /* TEXT */
+  .text-brown {
+    color: hsl(var(--theme-primary));
+  }
+
+  .text-brown-dark {
+    color: hsl(var(--theme-primary-dark));
+  }
+
+  /* BACKGROUND */
+  .bg-brown {
+    background-color: hsl(var(--theme-primary));
+  }
+
+  /* BORDER */
+  .border-brown {
+    border-color: hsl(var(--theme-primary));
+  }
+}
