@@ -53,7 +53,7 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     color: 'from-amber-500/20 to-orange-500/20',
     gitLink:"https://github.com/nikhil1205-ai/WanderLust",
-    deployLink:"/",
+    deployLink:"https://wanderlust-05t8.onrender.com",
 
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     description: 'A full-stack web application showcasing modern web development skills with dynamic features and responsive design.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     color: 'from-amber-500/20 to-orange-500/20',
-    gitLink:"https://github.com/nikhil1205-ai/WanderLust",
+    gitLink:"https://github.com/nikhil1205-ai/Zerodha-clone",
     deployLink:"/",
 
   },
