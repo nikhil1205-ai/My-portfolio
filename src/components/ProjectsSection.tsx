@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Globe, Brain, MessageSquare, Activity, User,Calculator,PiggyBank } from 'lucide-react';
+import { ExternalLink, Github, Globe, Brain, MessageSquare, Activity, User,Calculator,PiggyBank,VideoIcon } from 'lucide-react';
 
 const projects = [
   {
@@ -57,15 +57,26 @@ const projects = [
 
   },
   {
+    icon: VideoIcon,
+    title: 'VideoConnect ',
+    description: 'VideoConnect is a modern, browser-based video communication platform built to make online meetings effortless, fast, and reliable.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    color: 'from-green-500/20 to-emerald-500/20',
+    gitLink:"https://github.com/nikhil1205-ai/VideoConnect",
+    deployLink:"https://videoconnect-frontend.onrender.com",
+
+  },
+  {
     icon: PiggyBank,
     title: 'Zerodha clone',
     description: 'A full-stack web application showcasing modern web development skills with dynamic features and responsive design.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-    color: 'from-amber-500/20 to-orange-500/20',
+    color: 'from-blue-500/20 to-cyan-500/20',
     gitLink:"https://github.com/nikhil1205-ai/Zerodha-clone",
     deployLink:"/",
 
   },
+  
   
 ];
 
