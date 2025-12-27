@@ -73,7 +73,7 @@ const projects = [
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     color: 'from-blue-500/20 to-cyan-500/20',
     gitLink:"https://github.com/nikhil1205-ai/Zerodha-clone",
-    deployLink:"/",
+    deployLink:"https://zerodha-clone-frontend-r06o.onrender.com",
 
   },
   
