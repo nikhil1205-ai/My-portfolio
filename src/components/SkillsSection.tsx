@@ -14,7 +14,7 @@ const skillCategories = [
       'Machine Learning', 'Deep Learning', 'NLP',
       'PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn',
       'RNN', 'LSTM', 'Transformers', 'Generative AI',
-      'Statistics for ML', 'MySQL', 'MongoDB'
+      'Statistics for ML', 'MySQL', 'MongoDB','LangChain','LangGraph'
     ],
   },
   {

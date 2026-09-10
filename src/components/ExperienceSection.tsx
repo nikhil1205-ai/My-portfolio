@@ -22,6 +22,13 @@ const experiences = [
     description: 'Delivering web development and ML-related solutions for clients, focusing on quality, communication, and problem-solving.',
     type: 'Freelance',
   },
+  {
+  icon: Briefcase,
+  title: 'Campus Mantri',
+  organization: 'GeeksforGeeks',
+  description: 'Represented GeeksforGeeks on campus by leading learning initiatives, organizing and promoting technical activities, encouraging student participation, and helping build a strong developer community.',
+  type: 'Campus Program',
+  },
 ];
 
 const ExperienceSection = () => {
